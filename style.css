@@ -10,6 +10,7 @@
     --glass-bg: rgba(255, 255, 255, 0.03);
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+    --font-display: 'Michroma', sans-serif;
 }
 
 * {
@@ -32,8 +33,10 @@ h1,
 h2,
 h3,
 h4 {
-    letter-spacing: -0.02em;
-    font-weight: 600;
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
 .gradient-text {
@@ -99,11 +102,13 @@ h4 {
 }
 
 .logo {
-    font-weight: 600;
+    font-family: var(--font-display);
+    font-weight: 400;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    letter-spacing: 0.05em;
 }
 
 .beta-badge {
@@ -113,6 +118,22 @@ h4 {
     padding: 0.1rem 0.4rem;
     border-radius: 4px;
     color: var(--text-secondary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-primary);
 }
 
 /* Hero Section */
@@ -140,17 +161,20 @@ h4 {
 }
 
 .hero h1 {
-    font-size: 4rem;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    max-width: 800px;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    max-width: 900px;
+    text-transform: uppercase;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: var(--text-secondary);
     max-width: 600px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
+    font-family: var(--font-main);
+    letter-spacing: normal;
 }
 
 .hero-visual {
@@ -286,6 +310,87 @@ h4 {
     background: linear-gradient(45deg, rgba(16, 185, 129, 0.1), transparent);
 }
 
+/* Security Section */
+.security-section {
+    padding: 8rem 5%;
+    background: linear-gradient(to bottom, var(--bg-color), var(--bg-secondary));
+}
+
+.security-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.security-icon {
+    margin-bottom: 1.5rem;
+    display: inline-flex;
+    padding: 1rem;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 50%;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+}
+
+.gradient-text-green {
+    background: linear-gradient(to right, #fff, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.security-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.security-header p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.security-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.security-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.security-card:hover {
+    border-color: rgba(16, 185, 129, 0.3);
+    transform: translateY(-5px);
+    background: rgba(16, 185, 129, 0.02);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.security-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.security-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 /* CTA Section */
 .cta-section {
     padding: 8rem 5%;
@@ -351,7 +456,7 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .bento-grid {
@@ -366,4 +471,45 @@ footer {
     .hero {
         padding-top: 6rem;
     }
+
+    .nav-links {
+        display: none;
+    }
+
+    .security-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .security-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delays for Bento grid */
+.bento-card:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.bento-card:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.bento-card:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.bento-card:nth-child(4) {
+    transition-delay: 0.4s;
 }

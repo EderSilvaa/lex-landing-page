@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Michroma&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,20 +18,25 @@
 <body>
     <nav class="navbar">
         <div class="logo">Lex <span class="beta-badge">BETA</span></div>
+        <div class="nav-links">
+            <a href="#features" class="nav-link">Como funciona</a>
+            <a href="#" class="nav-link">Comunidade</a>
+            <a href="#" class="nav-link">Changelog</a>
+        </div>
         <a href="#contact" class="btn-secondary">Acesso Antecipado</a>
     </nav>
 
     <header class="hero">
         <div class="hero-bg-glow"></div>
-        <div class="hero-content">
-            <h1>O Copilot Jurídico <br><span class="gradient-text">Integrado ao PJE</span></h1>
-            <p>Aumente sua produtividade com IA generativa que cria peças com copy assertiva e precisão jurídica.</p>
+        <div class="hero-content reveal">
+            <h1>A Nova Dimensão <br><span class="gradient-text">da Advocacia</span></h1>
+            <p>Potencialize seu raciocínio com tecnologia invisível integrada ao PJE.</p>
             <div class="cta-group">
                 <a href="#contact" class="btn-primary">Entrar na Lista de Espera</a>
                 <a href="#features" class="btn-secondary">Como funciona</a>
             </div>
         </div>
-        <div class="hero-visual">
+        <div class="hero-visual reveal">
             <div class="terminal-header">
                 <div class="dot"></div>
                 <div class="dot"></div>
@@ -53,7 +58,7 @@
 
     <section id="features" class="features">
         <div class="bento-grid">
-            <div class="bento-card large">
+            <div class="bento-card large reveal">
                 <div class="bento-content">
                     <h3>Integração Nativa PJE</h3>
                     <p>O Lex vive onde você trabalha. Nossa extensão lê o processo diretamente no navegador e sugere
@@ -61,21 +66,21 @@
                 </div>
                 <div class="bento-visual visual-pje"></div>
             </div>
-            <div class="bento-card">
+            <div class="bento-card reveal">
                 <div class="bento-content">
                     <h3>Copy Assertiva</h3>
                     <p>Modelos treinados para persuasão jurídica e alta taxa de êxito.</p>
                 </div>
                 <div class="bento-visual visual-copy"></div>
             </div>
-            <div class="bento-card">
+            <div class="bento-card reveal">
                 <div class="bento-content">
                     <h3>Segurança Total</h3>
                     <p>Seus dados são criptografados e nunca usados para treinar modelos públicos.</p>
                 </div>
                 <div class="bento-visual visual-security"></div>
             </div>
-            <div class="bento-card large">
+            <div class="bento-card large reveal">
                 <div class="bento-content">
                     <h3>Evolução Contínua</h3>
                     <p>Atualizações semanais baseadas no feedback da comunidade jurídica.</p>
@@ -85,7 +90,40 @@
         </div>
     </section>
 
-    <section id="contact" class="cta-section">
+    <section id="security" class="security-section reveal">
+        <div class="security-header">
+            <div class="security-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="#10b981" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M12 8V16" stroke="#10b981" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+            <h2>Sua privacidade é <span class="gradient-text-green">inegociável</span>.</h2>
+            <p>Arquitetura Zero-Trust desenhada para escritórios de advocacia.</p>
+        </div>
+        <div class="security-grid">
+            <div class="security-card">
+                <div class="card-icon">🔒</div>
+                <h3>Criptografia Militar</h3>
+                <p>Dados criptografados em repouso e em trânsito (AES-256). Nem nós temos acesso ao que você escreve.
+                </p>
+            </div>
+            <div class="security-card">
+                <div class="card-icon">🛡️</div>
+                <h3>Dados Isolados</h3>
+                <p>Seus processos e peças jurídicas nunca são usados para treinar modelos públicos de IA.</p>
+            </div>
+            <div class="security-card">
+                <div class="card-icon">⚖️</div>
+                <h3>Compliance Total</h3>
+                <p>Desenvolvido em conformidade rigorosa com a LGPD e as normas de ética da OAB.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta-section reveal">
         <div class="cta-glow"></div>
         <h2>Construa o futuro da advocacia.</h2>
         <p style="color: var(--text-secondary); margin-top: 1rem;">Junte-se a advogados inovadores usando Lex.</p>
